@@ -35,4 +35,8 @@ app.use(cors());
 // Route
 app.use("/users", usersRoute);
 
+app.get("/", (req, res) => {
+  res.send("API working. Please use '/users' route...");
+});
+
 app.listen(port, () => console.log(`Connected on port ${port}...`));

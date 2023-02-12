@@ -10,12 +10,13 @@ router.get("/", async (req, res) => {
 
 // CREATE
 router.post("/add", async (req, res) => {
-  const { fullname, temperature, email, phonenumber } = req.body;
+  const { firstname, lastname, email, gender, status } = req.body;
   const newUser = new User({
-    fullname,
-    temperature,
+    firstname,
+    lastname,
     email,
-    phonenumber,
+    gender,
+    status,
   });
 
   await newUser

@@ -3,13 +3,13 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema(
   {
-    fullname: {
+    firstname: {
       type: String,
       required: true,
       trim: true,
     },
-    temperature: {
-      type: Number,
+    lastname: {
+      type: String,
       required: true,
       trim: true,
     },
@@ -18,7 +18,12 @@ const userSchema = new Schema(
       required: true,
       trim: true,
     },
-    phonenumber: {
+    gender: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    status: {
       type: String,
       required: true,
       trim: true,
